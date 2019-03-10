@@ -1,0 +1,29 @@
+
+
+
+nav {
+    width: 100%;
+    
+    
+}
+
+.scores {
+    padding: 20px;
+    margin: 20px;
+    float: right;
+    font-family: 'Overpass Mono', monospace;
+}
+
+.navbar-brand {
+    font-size: 150px;
+    text-shadow: 2px 2px 8px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+
+.tag {
+    font-size: 15px;
+    text-transform: uppercase;
+    float: left;
+    font-family: 'Overpass Mono', monospace;
+}

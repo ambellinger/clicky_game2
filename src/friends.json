@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Pupper1",
+    "image": "https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "clicked" : false,
+    "nickname": "Boo Boo"
+  },
+  {
+    "id": 2,
+    "name": "Pupper2",
+    "image": "https://images.pexels.com/photos/374898/pexels-photo-374898.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "clicked" : false
+  },
+  {
+    "id": 3,
+    "name": "Pupper3",
+    "image": "https://images.pexels.com/photos/1485637/pexels-photo-1485637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 4,
+    "name": "Pupper4",
+    "image": "https://images.pexels.com/photos/235805/pexels-photo-235805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 5,
+    "name": "Pupper5",
+    "image": "https://images.pexels.com/photos/485294/pexels-photo-485294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 6,
+    "name": "Pupper6",
+    "image":"https://images.pexels.com/photos/1619690/pexels-photo-1619690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 7,
+    "name": "Pupper7",
+    "image": "https://images.pexels.com/photos/164186/pexels-photo-164186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 8,
+    "name": "Pupper8",
+    "image": "https://images.pexels.com/photos/374908/pexels-photo-374908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 9,
+    "name": "Pupper9",
+    "image": "https://images.pexels.com/photos/879788/pexels-photo-879788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 10,
+    "name": "Pupper10",
+    "image": "https://images.pexels.com/photos/1638724/pexels-photo-1638724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 11,
+    "name": "Pupper11",
+    "image": "https://images.pexels.com/photos/800330/pexels-photo-800330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "clicked" : false
+  },
+  {
+    "id": 12,
+    "name": "Pupper12",
+    "image": "https://images.pexels.com/photos/1493110/pexels-photo-1493110.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "clicked" : false
+  }
+]
