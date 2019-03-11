@@ -14,89 +14,111 @@ class App extends Component {
     score: 0
   };
 
+
   removeFriend = id => {
-    friends.sort(() => Math.random() - 0.5);
+    // friends.sort(() => Math.random() - 0.5);
     this.setState({ friends, score: this.state.score + 1, });
-    this.setState({ highscore: this.state.highscore + 1 });
-    //   this.setState(prevState => {
-    //      const friendsinfo = prevState.friends.map(friends => {
-    //        if (friends.id === id) {
-    //          friends.clicked = true;
-    //          console.log(friends);
-    //      } return friends;
-    //    });
-    //    return{
-    //      friends: friendsinfo
-    //    }
-    //  })
+    //  this.setState({ highscore: this.state.highscore + 1 });
+       this.setState(prevState => {
+         const friendsinfo = prevState.friends.map(friends => {
+            if (friends.id === id) {
+              friends.clicked = true;
+              console.log(friends);
+          } return friends;
+        });
+        return{
+          friends: friendsinfo
+        }
+      })
   };
 
   booleanFriend = id => {
-    this.setState(prevState => {
-      const friendsinfo = prevState.friends.map(friends => {
-        if (friends.id === id) {
-          friends.clicked = true;
-          console.log(friends);
-        } return friends;
-      });
-      return {
-        friends: friendsinfo
+    
+    friends.sort(() => Math.random() - 0.5);
+  const friendsinfo = this.state.friends.map( friends => {
+    if(friends.id === id) {
+     
+      if (friends.clicked === false) {
+        friends.clicked = true;
+        console.log(friends.clicked);
+        this.removeFriend();
+        this.win();
+        
+
+        console.log("clicked a new pic");
+      } else {
+        this.endGame();
+       
       }
-    })
-    if (this.state.friends.clicked) {
-      this.removeFriend();
-    } else {
-      this.endGame();
-    }
+    } return friendsinfo
+  })
+
   }
 
   endGame = () => {
-    console.log("end game");
+    alert("Sorry. You lose 😥")
+      this.setState({ score : 0})  
+      
+      // this.randomize();
+      friends.clicked = false;
+      console.log("Did change the click?");
+      console.log(friends.clicked);
+
+      this.setState(gameState => {
+        const newGame = gameState.friends.map(friends => {
+          friends.clicked = false;
+          return newGame;
+        })
+      })
+ 
+
+    console.log("end game function");
   }
+
+  //Would like to thank Melvin Hernandez for this bit of logic here in maintaining
+    win = () => {
+      if(this.state.highscore < 12 && this.state.highscore === this.state.score) {
+        this.setState({
+          highscore: this.state.highscore + 1
+        });
+      }
+
+      if(this.state.score === 11 && this.state.highscore > 12) {
+         alert("Congrats! You won!");
+         this.endGame(); 
+         this.setState({highscore: 0});
+       } 
+    }
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
-    //  var mapFriends = friends.map(friend => 
-    //    <FriendCard 
-    //    key={friend.id}
-    //    image={friend.image}
-    //    onClick = {friend.clicked ? this.endGame : this.removeFriend}     
-    //   />)
 
-
-    const newFriends = friends.map(friend =>
-      <FriendCard
-        image={friend.image}
-        key={friend.id}
-        // quick ternary expression to see if photo is clicked already
-        onClick={friend.clicked ? this.endGame : this.removeFriend}
-      />
-    )
-    return (
-
- 
-            
+    return ( 
       <Wrapper>
         <div className="container">
           <Navbar
             score={this.state.score}
-            highscore={this.state.highscore} />
+            highscore={this.state.highscore}
+           
+            
+            />
              
         </div>
-            {newFriends}
-         
-          {/* <FriendCard
-            //mapFriends={mapFriends}
-            //onClick ={this.friends.clicked ? this.endGame :  this.removeFriend}
-            removeFriend={this.removeFriend}
+          
+
+            {this.state.friends.map(friend => ( 
+           <FriendCard
             booleanFriend={this.booleanFriend}
-            //clicked={this.state.clicked}
-            nickname={friend.nickname}
             id={friend.id}
+            win={this.win}
             key={friend.id}
+            
             image={friend.image}
-          /> */}
+          /> 
         ))}
+
+
         <Footer 
         />
       </Wrapper>
